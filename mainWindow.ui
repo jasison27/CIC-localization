@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Localization System</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="LocationPlot" name="widget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>TagID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Location</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Event</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>Tag 1</string>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string>(5,4,0)</string>
+         </property>
+        </item>
+        <item row="0" column="2">
+         <property name="text">
+          <string>10:03 2015/3/4</string>
+         </property>
+        </item>
+        <item row="0" column="3">
+         <property name="text">
+          <string>Warning: walking towards the danger zone 1.</string>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string>Tag 2</string>
+         </property>
+        </item>
+        <item row="1" column="1">
+         <property name="text">
+          <string>(1,2,0)</string>
+         </property>
+        </item>
+        <item row="1" column="2">
+         <property name="text">
+          <string>10:03 2015/3/4</string>
+         </property>
+        </item>
+        <item row="1" column="3">
+         <property name="text">
+          <string>Normal</string>
+         </property>
+        </item>
+        <item row="2" column="0">
+         <property name="text">
+          <string>Tag 3</string>
+         </property>
+        </item>
+        <item row="2" column="1">
+         <property name="text">
+          <string>(3,3,0)</string>
+         </property>
+        </item>
+        <item row="2" column="2">
+         <property name="text">
+          <string>10:03 2015/3/4</string>
+         </property>
+        </item>
+        <item row="2" column="3">
+         <property name="text">
+          <string>Normal</string>
+         </property>
+        </item>
+        <item row="3" column="0">
+         <property name="text">
+          <string>Tag 4</string>
+         </property>
+        </item>
+        <item row="3" column="1">
+         <property name="text">
+          <string>(5,2,0)</string>
+         </property>
+        </item>
+        <item row="3" column="2">
+         <property name="text">
+          <string>10:03 2015/3/4</string>
+         </property>
+        </item>
+        <item row="3" column="3">
+         <property name="text">
+          <string>Normal</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1440</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuApplication">
+    <property name="title">
+     <string>Application</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionDynamic_Tags"/>
+    <addaction name="actionDangerous_Zones_Settings"/>
+    <addaction name="actionAnchor_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Query</string>
+    </property>
+    <addaction name="actionHistory_Query"/>
+    <addaction name="actionHistory_Event"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout_2">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <addaction name="menuApplication"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuAbout"/>
+   <addaction name="menuAbout_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionDynamic_Tags">
+   <property name="text">
+    <string>Dynamic Tag Settings</string>
+   </property>
+  </action>
+  <action name="actionDangerous_Zones_Settings">
+   <property name="text">
+    <string>Dangerous Zones Settings</string>
+   </property>
+  </action>
+  <action name="actionAnchor_Settings">
+   <property name="text">
+    <string>Anchor Settings</string>
+   </property>
+  </action>
+  <action name="actionHistory_Query">
+   <property name="text">
+    <string>History Trajectory</string>
+   </property>
+  </action>
+  <action name="actionHistory_Event">
+   <property name="text">
+    <string>History Event</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LocationPlot</class>
+   <extends>QWidget</extends>
+   <header>locationplot</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
